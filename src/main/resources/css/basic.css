@@ -1,0 +1,70 @@
+/* Container for the login form */
+.login-container {
+    -fx-padding: 20px;
+    -fx-background-color: linear-gradient(to bottom right, #ffffff, #f0f4f8);
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 10, 0, 0, 10);
+    -fx-alignment: center;
+}
+
+/* System Logo */
+.logo {
+    -fx-pref-width: 80px;
+    -fx-pref-height: 80px;
+    -fx-background-radius: 50%;
+    -fx-background-color: radial-gradient(center 50% 50%, radius 50%, #ffbb00, #ff565e, #30cfd0);
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center;
+}
+
+/* Form Fields (Username and Password) */
+.input-field {
+    -fx-pref-width: 100%;
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #c4c4c4 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-font-size: 16px;
+    -fx-text-fill: #333;
+}
+
+/* Login Button */
+.login-button {
+
+    -fx-background-radius: 10px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: linear-gradient(to right, #a8e5d3, #8799ed);
+    -fx-effect: dropshadow(gaussian, rgba(48, 207, 208, 0.3), 5, 0, 0, 5);
+}
+
+.login-button:hover {
+    -fx-background-color: linear-gradient(to right, #330867, #30cfd0);
+}
+
+/* Sign Up Button */
+.signup-button {
+    -fx-background-radius: 10px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: linear-gradient(to right, #ff9a9e, #fad0c4);
+    -fx-effect: dropshadow(gaussian, rgba(255, 154, 158, 0.3), 5, 0, 0, 5);
+}
+
+.signup-button:hover {
+    -fx-background-color: linear-gradient(to right, #fad0c4, #ff9a9e);
+}
+
+/* Main AnchorPane styling */
+.main-anchor-pane {
+    -fx-background-color: linear-gradient(to bottom right, #515151, #c4b30d); /* Soft gradient background */
+    -fx-padding: 20px; /* Inner padding */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 20, 0, 0, 10); /* Soft drop shadow */
+}
+
+
+
