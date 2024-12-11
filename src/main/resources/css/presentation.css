@@ -1,0 +1,47 @@
+.schedule-bg{
+    -fx-background-color:linear-gradient(to bottom right, #66FF66, #33CC33);
+    -fx-background-radius:20px;
+}
+
+.start-bg{
+    -fx-background-color:linear-gradient(to bottom right, #FF9966, #FFFF66);
+    -fx-background-radius:20px;
+}
+
+.performance-bg{
+    -fx-background-color:linear-gradient(to bottom right, #0099CC, #00FFCC);
+    -fx-background-radius:20px;
+}
+
+.schedule-btn{
+    -fx-background-color:#009900;
+    -fx-background-radius:8px;
+    -fx-text-fill:#fff;
+    -fx-font-family:"Arial";
+    -fx-cursor:hand;
+}
+.schedule-btn:hover{
+    -fx-background-color:#33ad14;
+}
+
+.start-btn{
+    -fx-background-color:#ff9933;
+    -fx-background-radius:8px;
+    -fx-text-fill:#fff;
+    -fx-font-family:"Arial";
+    -fx-cursor:hand;
+}
+.start-btn:hover{
+    -fx-background-color:#e6992e;
+}
+
+.performance-btn{
+    -fx-background-color:#0066FF;
+    -fx-background-radius:8px;
+    -fx-text-fill:#fff;
+    -fx-font-family:"Arial";
+    -fx-cursor:hand;
+}
+.performance-btn:hover{
+    -fx-background-color:#3366FF;
+}
