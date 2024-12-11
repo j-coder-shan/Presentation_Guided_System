@@ -30,6 +30,31 @@
 .nav-form{
     -fx-background-color:linear-gradient(to bottom right, #272b3f, #256b51);
 }
+.dashBoardUpper-bg{
+    -fx-background-color:linear-gradient(to bottom right, #349873, #8dd8bc);
+    -fx-background-radius:8px;
+}
+.dashBoardUpper-bg:hover{
+    -fx-background-color:linear-gradient(to bottom right,  #8dd8bc, #349873);
+    -fx-background-radius:8px;
+}
+.name{
+    -fx-alignment:CENTER-RIGHT;
+}
+.circular-image {
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-radius: 50%; /* Makes it circular */
+    -fx-border-radius: 50%;    /* Applies the circular effect to the border */
+    -fx-border-color: #ffffff; /* Optional: Adds a white border */
+    -fx-border-width: 2;       /* Adjust border thickness */
+    -fx-min-width: 100px;      /* Set width */
+    -fx-min-height: 100px;     /* Set height */
+    -fx-max-width: 100px;      /* Keep the shape consistent */
+    -fx-max-height: 100px;
+}
+
+
 
 .nav-btn{
     -fx-background-color:transparent;

@@ -2,110 +2,515 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1925.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1925.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.presentation_guided_system.lecturer">
    <left>
-      <VBox prefHeight="1000.0" prefWidth="325.0" styleClass="nav-form" stylesheets="@css/dashBoardDesign.css"
-            BorderPane.alignment="CENTER">
-         <Label prefHeight="60.0" prefWidth="327.0" text="Label"/>
+      <VBox prefHeight="1000.0" prefWidth="325.0" styleClass="nav-form" stylesheets="@css/dashBoardDesign.css" BorderPane.alignment="CENTER">
+         <Label prefHeight="60.0" prefWidth="327.0" text="Label" />
          <HBox prefHeight="107.0" prefWidth="328.0">
-            <Label prefHeight="134.0" prefWidth="92.0" text="Label"/>
+            <Label prefHeight="134.0" prefWidth="92.0" text="Label" />
             <ImageView fitHeight="122.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
-               <Image url="@images/logo.png"/>
+               <Image url="@images/logo.png" />
             </ImageView>
          </HBox>
-         <Label prefHeight="69.0" prefWidth="328.0" text="            -  PresentEase  -"
-                textAlignment="CENTER" textFill="WHITE">
+         <Label prefHeight="69.0" prefWidth="328.0" text="            -  PresentEase  -" textAlignment="CENTER" textFill="WHITE">
             <font>
-               <Font name="Leelawadee Bold" size="23.0"/>
+               <Font name="Leelawadee Bold" size="23.0" />
             </font>
          </Label>
-         <Label layoutX="10.0" layoutY="192.0" prefHeight="56.0" prefWidth="328.0" textAlignment="CENTER"
-                textFill="WHITE">
+         <Label layoutX="10.0" layoutY="192.0" prefHeight="56.0" prefWidth="328.0" textAlignment="CENTER" textFill="WHITE">
             <font>
-               <Font name="System Bold" size="23.0"/>
+               <Font name="System Bold" size="23.0" />
             </font>
          </Label>
-         <JFXButton fx:id="dashboardButton" focusTraversable="false" prefHeight="59.0" prefWidth="328.0"
-                    styleClass="nav-btn" stylesheets="@css/dashBoardDesign.css" text="          DASH BOARD"
-                    textFill="WHITE">
+         <JFXButton fx:id="dashboardButton" focusTraversable="false" onAction="#dashBoardPaneOpen" prefHeight="59.0" prefWidth="328.0" styleClass="nav-btn" stylesheets="@css/dashBoardDesign.css" text="          DASH BOARD" textFill="WHITE">
             <font>
-               <Font name="Leelawadee" size="21.0"/>
+               <Font name="Leelawadee" size="21.0" />
             </font>
             <graphic>
-               <ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true"/>
+               <ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" />
             </graphic>
          </JFXButton>
-         <JFXButton fx:id="coursesButton" focusTraversable="false" layoutX="10.0" layoutY="317.0" prefHeight="59.0"
-                    prefWidth="328.0" styleClass="nav-btn" stylesheets="@css/dashBoardDesign.css"
-                    text="          COURSES" textFill="WHITE">
+         <JFXButton fx:id="coursesButton" focusTraversable="false" layoutX="10.0" layoutY="317.0" onAction="#coursesPaneOpen" prefHeight="59.0" prefWidth="328.0" styleClass="nav-btn" stylesheets="@css/dashBoardDesign.css" text="          COURSES" textFill="WHITE">
             <font>
-               <Font name="Leelawadee" size="21.0"/>
+               <Font name="Leelawadee" size="21.0" />
             </font>
             <graphic>
-               <ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true"/>
+               <ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" />
             </graphic>
          </JFXButton>
-         <JFXButton fx:id="presentationsButton" focusTraversable="false" layoutX="10.0" layoutY="376.0"
-                    prefHeight="59.0" prefWidth="328.0" styleClass="nav-btn" stylesheets="@css/dashBoardDesign.css"
-                    text="          PRESENTATIONS" textFill="WHITE">
+         <JFXButton fx:id="presentationsButton" focusTraversable="false" layoutX="10.0" layoutY="376.0" onAction="#presentationsPaneOpen" prefHeight="59.0" prefWidth="328.0" styleClass="nav-btn" stylesheets="@css/dashBoardDesign.css" text="          PRESENTATIONS" textFill="WHITE">
             <font>
-               <Font name="Leelawadee" size="21.0"/>
+               <Font name="Leelawadee" size="21.0" />
             </font>
             <graphic>
-               <ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true"/>
+               <ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" />
             </graphic>
          </JFXButton>
-         <JFXButton fx:id="settingsButton" focusTraversable="false" layoutX="10.0" layoutY="435.0" prefHeight="59.0"
-                    prefWidth="328.0" styleClass="nav-btn" stylesheets="@css/dashBoardDesign.css"
-                    text="          SETTINGS" textFill="WHITE">
+         <JFXButton fx:id="settingsButton" focusTraversable="false" layoutX="10.0" layoutY="435.0" onAction="#settingsPaneOpen" prefHeight="59.0" prefWidth="328.0" styleClass="nav-btn" stylesheets="@css/dashBoardDesign.css" text="          SETTINGS" textFill="WHITE">
             <font>
-               <Font name="Leelawadee" size="21.0"/>
+               <Font name="Leelawadee" size="21.0" />
             </font>
             <graphic>
-               <ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true"/>
+               <ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" />
             </graphic>
          </JFXButton>
       </VBox>
    </left>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@css/dashBoardDesign.css"
-                  BorderPane.alignment="CENTER">
-         <AnchorPane fx:id="lec_dashBoardPane" layoutX="10.0" layoutY="10.0" prefHeight="980.0" prefWidth="1580.0"
-                     stylesheets="@css/dashBoardDesign.css" visible="false">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@css/dashBoardDesign.css" BorderPane.alignment="CENTER">
+         <AnchorPane fx:id="lec_dashBoardPane" layoutX="10.0" layoutY="10.0" prefHeight="980.0" prefWidth="1580.0" stylesheets="@css/dashBoardDesign.css">
             <styleClass>
-               <String fx:value="shadow"/>
-               <String fx:value="white-bg"/>
+               <String fx:value="shadow" />
+               <String fx:value="white-bg" />
             </styleClass>
+            <children>
+               <AnchorPane prefHeight="233.0" prefWidth="1580.0" styleClass="dashBoardUpper-bg" stylesheets="@css/dashBoardDesign.css">
+                  <children>
+                     <Label fx:id="dashBoard_name" focusTraversable="false" layoutX="955.0" layoutY="142.0" prefHeight="44.0" prefWidth="611.0" styleClass="name" stylesheets="@css/dashBoardDesign.css" textAlignment="RIGHT" textFill="WHITE">
+                        <font>
+                           <Font name="Leelawadee Bold" size="27.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="dashBoard_lecID" focusTraversable="false" layoutX="955.0" layoutY="78.0" prefHeight="44.0" prefWidth="611.0" styleClass="name" stylesheets="@css/dashBoardDesign.css" textAlignment="RIGHT" textFill="WHITE">
+                        <font>
+                           <Font name="Leelawadee Bold" size="27.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </AnchorPane>
+               <Circle fill="#f3f9ff" layoutX="203.0" layoutY="233.0" radius="132.0" stroke="BLACK" strokeType="INSIDE" />
+               <ImageView fitHeight="171.0" fitWidth="209.0" layoutX="99.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true" />
+               <AnchorPane layoutX="684.0" layoutY="399.0" prefHeight="567.0" prefWidth="882.0" styleClass="gray-bg" stylesheets="@css/dashBoardDesign.css">
+                  <children>
+                     <TableView fx:id="dashboard_table" focusTraversable="false" layoutX="28.0" layoutY="25.0" prefHeight="529.0" prefWidth="827.0">
+                       <columns>
+                         <TableColumn fx:id="dashboard_table_courseCode" prefWidth="102.0" text="COURSE CODE" />
+                         <TableColumn fx:id="dashboard_table_courseName" prefWidth="219.0" text="COURSE NAME" />
+                           <TableColumn fx:id="dashboard_table_presentation" prefWidth="258.0" text="PRESENTATION" />
+                           <TableColumn fx:id="dashboard_table_date" prefWidth="149.0" text="DATE" />
+                           <TableColumn fx:id="dashboard_table_time" prefWidth="98.0" text="TIME" />
+                       </columns>
+                     </TableView>
+                  </children>
+               </AnchorPane>
+               <AnchorPane layoutX="17.0" layoutY="396.0" prefHeight="570.0" prefWidth="641.0" styleClass="gray-bg" stylesheets="@css/dashBoardDesign.css">
+                  <children>
+                     <TableView fx:id="recentActivities_table" focusTraversable="false" layoutX="22.0" layoutY="31.0" prefHeight="527.0" prefWidth="600.0">
+                       <columns>
+                         <TableColumn fx:id="activity_column" prefWidth="599.0" text="RECENT ACTIVITIES" />
+                       </columns>
+                     </TableView>
+                  </children>
+               </AnchorPane>
+            </children>
          </AnchorPane>
-         <AnchorPane fx:id="lec_coursesPane" layoutX="10.0" layoutY="10.0" prefHeight="980.0" prefWidth="1580.0"
-                     stylesheets="@css/dashBoardDesign.css" visible="false">
+         <AnchorPane fx:id="lec_coursesPane" layoutX="10.0" layoutY="10.0" prefHeight="980.0" prefWidth="1580.0" stylesheets="@css/dashBoardDesign.css" visible="false">
             <styleClass>
-               <String fx:value="shadow"/>
-               <String fx:value="white-bg"/>
+               <String fx:value="shadow" />
+               <String fx:value="white-bg" />
+               <String fx:value="gray-bg" />
             </styleClass>
+            <children>
+               <TextField fx:id="courses_searchBar" focusTraversable="false" layoutX="70.0" layoutY="22.0" prefHeight="30.0" prefWidth="276.0" promptText="Search" styleClass="search" stylesheets="@css/dashBoardDesign.css" />
+               <TableView fx:id="courses_course_table" focusTraversable="false" layoutX="24.0" layoutY="85.0" prefHeight="642.0" prefWidth="968.0">
+                 <columns>
+                   <TableColumn fx:id="courses_courseCode_column" prefWidth="159.0" text="COURSE CODE" />
+                   <TableColumn fx:id="courses_courseName_column" prefWidth="284.0" text="COURSE NAME" />
+                     <TableColumn fx:id="courses_courseStartDate_column" prefWidth="187.0" text="START DATE" />
+                     <TableColumn fx:id="courses_noOfStudents_column" prefWidth="149.0" text="NO OF STUDENTS" />
+                     <TableColumn fx:id="courses_presentation_column" prefWidth="188.0" text="PRESENTATIONS" />
+                 </columns>
+               </TableView>
+               <TableView fx:id="courses_student_table" layoutX="1011.0" layoutY="85.0" prefHeight="876.0" prefWidth="554.0">
+                 <columns>
+                   <TableColumn fx:id="courses_student_courseCode" prefWidth="120.0" text="COURSE CODE" />
+                   <TableColumn fx:id="courses_student_ID" prefWidth="157.0" text="STUDENT ID" />
+                     <TableColumn fx:id="courses_student_name" prefWidth="276.0" text="STUDENT NAME" />
+                 </columns>
+               </TableView>
+               <Label focusTraversable="false" layoutX="26.0" layoutY="779.0" text="COURSE CODE :">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="courses_courseCode_field" layoutX="133.0" layoutY="777.0" prefHeight="25.0" prefWidth="180.0" styleClass="textfield" stylesheets="@css/dashBoardDesign.css" />
+               <Label focusTraversable="false" layoutX="357.0" layoutY="779.0" text="COURSE NAME :">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="courses_courseName_field" layoutX="469.0" layoutY="777.0" prefHeight="25.0" prefWidth="180.0" styleClass="textfield" stylesheets="@css/dashBoardDesign.css" />
+               <Label focusTraversable="false" layoutX="705.0" layoutY="779.0" text="START DATE :">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Label>
+               <Label focusTraversable="false" layoutX="26.0" layoutY="840.0" text="STUDENTS :">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="courses_students_field" editable="false" layoutX="133.0" layoutY="838.0" prefHeight="25.0" prefWidth="180.0" styleClass="textfield" stylesheets="@css/dashBoardDesign.css" />
+               <Label focusTraversable="false" layoutX="349.0" layoutY="840.0" text="PRESENTATIONS :">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="courses_presentations_field" editable="false" layoutX="469.0" layoutY="838.0" prefHeight="25.0" prefWidth="180.0" styleClass="textfield" stylesheets="@css/dashBoardDesign.css" />
+               <Button fx:id="courses_clear_btn" focusTraversable="false" layoutX="145.0" layoutY="926.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="95.0" styleClass="clear-btn" stylesheets="@css/dashBoardDesign.css" text="Clear" />
+               <Button fx:id="courses_delete_btn" focusTraversable="false" layoutX="338.0" layoutY="926.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="95.0" styleClass="delete-btn" stylesheets="@css/dashBoardDesign.css" text="Delete" />
+               <Button fx:id="courses_update_btn" focusTraversable="false" layoutX="529.0" layoutY="926.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="95.0" styleClass="update-btn" stylesheets="@css/dashBoardDesign.css" text="Update" />
+               <Button fx:id="courses_add_btn" focusTraversable="false" layoutX="717.0" layoutY="926.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="95.0" styleClass="add-btn" stylesheets="@css/dashBoardDesign.css" text="Add" />
+               <DatePicker fx:id="courses_datePicker" focusTraversable="false" layoutX="812.0" layoutY="777.0" prefHeight="25.0" prefWidth="180.0" styleClass="textfield" stylesheets="@css/dashBoardDesign.css" />
+            </children>
          </AnchorPane>
-         <AnchorPane fx:id="lec_presentationPane" layoutX="12.0" layoutY="10.0" prefHeight="980.0" prefWidth="1580.0"
-                     stylesheets="@css/dashBoardDesign.css" visible="false">
+         <AnchorPane fx:id="lec_presentationPane" layoutX="12.0" layoutY="10.0" prefHeight="980.0" prefWidth="1580.0" stylesheets="@css/dashBoardDesign.css" visible="false">
             <styleClass>
-               <String fx:value="white-bg"/>
-               <String fx:value="shadow"/>
+               <String fx:value="white-bg" />
+               <String fx:value="shadow" />
             </styleClass>
+            <children>
+               <AnchorPane layoutX="95.0" layoutY="340.0" prefHeight="300.0" prefWidth="387.0" styleClass="start-bg" stylesheets="@css/presentation.css">
+                  <children>
+                     <ImageView fitHeight="120.0" fitWidth="146.0" layoutX="134.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/icons8-meeting-48.png" />
+                        </image>
+                     </ImageView>
+                     <Label focusTraversable="false" layoutX="104.0" layoutY="143.0" prefHeight="83.0" prefWidth="180.0" text="Start Meeting" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="27.0" />
+                        </font>
+                     </Label>
+                     <Button fx:id="lec_pre_startMeeting_btn" focusTraversable="false" layoutX="116.0" layoutY="226.0" mnemonicParsing="false" onAction="#pre_startMeetingPaneOpen" prefHeight="44.0" prefWidth="156.0" styleClass="start-btn" text="GO">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Button>
+                  </children>
+               </AnchorPane>
+               <AnchorPane layoutX="570.0" layoutY="340.0" prefHeight="300.0" prefWidth="387.0" styleClass="schedule-bg" stylesheets="@css/presentation.css">
+                  <children>
+                     <ImageView fitHeight="110.0" fitWidth="131.0" layoutX="139.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/icons8-schedule-50.png" />
+                        </image>
+                     </ImageView>
+                     <Label focusTraversable="false" layoutX="135.0" layoutY="143.0" prefHeight="83.0" prefWidth="118.0" text="Schedule" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="27.0" />
+                        </font>
+                     </Label>
+                     <Button fx:id="lec_pre_schedule_btn" focusTraversable="false" layoutX="116.0" layoutY="226.0" mnemonicParsing="false" onAction="#pre_schedulePaneOpen" prefHeight="44.0" prefWidth="156.0" styleClass="schedule-btn" text="GO">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Button>
+                  </children>
+               </AnchorPane>
+               <AnchorPane layoutX="1053.0" layoutY="340.0" prefHeight="300.0" prefWidth="387.0" styleClass="performance-bg" stylesheets="@css/presentation.css">
+                  <children>
+                     <ImageView fitHeight="115.0" fitWidth="112.0" layoutX="125.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/icons8-performance-50.png" />
+                        </image>
+                     </ImageView>
+                     <Label focusTraversable="false" layoutX="112.0" layoutY="143.0" prefHeight="83.0" prefWidth="165.0" text="Performance" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="27.0" />
+                        </font>
+                     </Label>
+                     <Button fx:id="lec_pre_performance_btn" focusTraversable="false" layoutX="116.0" layoutY="226.0" mnemonicParsing="false" onAction="#pre_performancePaneOpen" prefHeight="44.0" prefWidth="156.0" styleClass="performance-btn" text="GO">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Button>
+                  </children>
+               </AnchorPane>
+            </children>
          </AnchorPane>
-         <AnchorPane fx:id="lec_settingsPane" layoutX="12.0" layoutY="10.0" prefHeight="980.0" prefWidth="1580.0"
-                     stylesheets="@css/dashBoardDesign.css" visible="false">
+         <AnchorPane fx:id="lec_settingsPane" layoutX="12.0" layoutY="10.0" prefHeight="980.0" prefWidth="1580.0" stylesheets="@css/dashBoardDesign.css" visible="false">
             <styleClass>
-               <String fx:value="white-bg"/>
-               <String fx:value="shadow"/>
+               <String fx:value="white-bg" />
+               <String fx:value="shadow" />
             </styleClass>
+            <children>
+               <AnchorPane layoutX="25.0" layoutY="25.0" prefHeight="370.0" prefWidth="750.0">
+                  <styleClass>
+                     <String fx:value="shadow" />
+                     <String fx:value="white-bg" />
+                  </styleClass>
+                  <children>
+                     <Label layoutX="29.0" layoutY="14.0" text="Change User Name" underline="true">
+                        <font>
+                           <Font name="System Bold" size="20.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="68.0" layoutY="114.0" text="User Name :">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="lec_settings_userNameField_1" focusTraversable="false" layoutX="225.0" layoutY="110.0" prefHeight="35.0" prefWidth="487.0" styleClass="textfield" />
+                     <Label layoutX="68.0" layoutY="194.0" text="User Name :">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="lec_settings_userNameField_2" focusTraversable="false" layoutX="225.0" layoutY="190.0" prefHeight="35.0" prefWidth="487.0" styleClass="textfield" />
+                     <Button fx:id="lec_settings_userNameField_update" focusTraversable="false" layoutX="618.0" layoutY="269.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="94.0" styleClass="update-btn" text="Update" />
+                  </children>
+               </AnchorPane>
+               <AnchorPane layoutX="802.0" layoutY="25.0" prefHeight="370.0" prefWidth="750.0">
+                  <styleClass>
+                     <String fx:value="shadow" />
+                     <String fx:value="white-bg" />
+                  </styleClass>
+                  <children>
+                     <Label layoutX="58.0" layoutY="14.0" text="Change Password" underline="true">
+                        <font>
+                           <Font name="System Bold" size="20.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="64.0" layoutY="117.0" text="Password :">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="64.0" layoutY="197.0" text="Password :">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Button fx:id="lec_settings_passwordField_update" focusTraversable="false" layoutX="614.0" layoutY="272.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="94.0" styleClass="update-btn" text="Update" />
+                     <PasswordField fx:id="lec_settings_passwordField_1" focusTraversable="false" layoutX="224.0" layoutY="118.0" prefHeight="35.0" prefWidth="485.0" styleClass="textfield" />
+                     <PasswordField fx:id="lec_settings_passwordField_2" focusTraversable="false" layoutX="224.0" layoutY="193.0" prefHeight="35.0" prefWidth="485.0" styleClass="textfield" />
+                  </children>
+               </AnchorPane>
+            </children>
+         </AnchorPane>
+         <AnchorPane fx:id="lec_pre_startMeeting_pane" layoutX="12.0" layoutY="14.0" prefHeight="975.0" prefWidth="1580.0" visible="false">
+            <styleClass>
+               <String fx:value="white-bg" />
+               <String fx:value="shadow" />
+            </styleClass>
+            <children>
+               <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="75.0" prefWidth="1550.0" styleClass="start-bg" stylesheets="@css/presentation.css">
+                  <children>
+                     <Label layoutX="45.0" layoutY="17.0" text="Start Meeting" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="28.0" />
+                        </font>
+                     </Label>
+                     <Button fx:id="lec_pre_startMeeting_back_btn" layoutX="1380.0" layoutY="18.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-font-size: 21;" styleClass="delete-btn" text="Go Back">
+                        <font>
+                           <Font size="21.0" />
+                        </font>
+                     </Button>
+                  </children>
+               </AnchorPane>
+               <TableView fx:id="startMeetingTable" focusTraversable="false" layoutX="34.0" layoutY="128.0" prefHeight="743.0" prefWidth="1523.0">
+                 <columns>
+                   <TableColumn fx:id="startMeetingTable_courseCode" editable="false" prefWidth="128.0" text="Course Code" />
+                   <TableColumn fx:id="startMeetingTable_CourseName" editable="false" minWidth="0.0" prefWidth="334.0" text="Course Name" />
+                     <TableColumn fx:id="startMeetingTable_GroupNo" editable="false" minWidth="0.0" prefWidth="139.0" text="Group No" />
+                     <TableColumn fx:id="startMeetingTable_MeetingName" editable="false" minWidth="0.0" prefWidth="399.0" text="Meeting Name" />
+                     <TableColumn fx:id="startMeetingTable_Password" editable="false" minWidth="0.0" prefWidth="192.0" text="Password" />
+                     <TableColumn fx:id="startMeetingTable_Date" editable="false" minWidth="0.0" prefWidth="189.0" text="Date" />
+                     <TableColumn fx:id="startMeetingTable_TIme" editable="false" minWidth="0.0" prefWidth="141.0" text="Time" />
+                 </columns>
+               </TableView>
+               <Label layoutX="46.0" layoutY="909.0" text="Course Code :">
+                  <font>
+                     <Font size="22.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="lec_startMeeting_courseCOde_textBox" editable="false" focusTraversable="false" layoutX="189.0" layoutY="909.0" prefHeight="34.0" prefWidth="313.0" styleClass="textfield" />
+               <Label layoutX="569.0" layoutY="909.0" text="Meeting Name :">
+                  <font>
+                     <Font size="22.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="lec_startMeeting_meetingName_textBox" editable="false" focusTraversable="false" layoutX="743.0" layoutY="908.0" prefHeight="34.0" prefWidth="313.0" styleClass="textfield" />
+               <Button fx:id="lec_startMeeting_start_btn" focusTraversable="false" layoutX="1167.0" layoutY="905.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="140.0" styleClass="print-btn" text="Start" />
+            </children>
+         </AnchorPane>
+         <AnchorPane fx:id="lec_pre_schedule_pane" layoutX="14.0" layoutY="14.0" prefHeight="975.0" prefWidth="1580.0" visible="false">
+            <styleClass>
+               <String fx:value="white-bg" />
+               <String fx:value="shadow" />
+            </styleClass>
+            <children>
+               <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="75.0" prefWidth="1550.0" styleClass="schedule-bg" stylesheets="@css/presentation.css">
+                  <children>
+                     <Label layoutX="44.0" layoutY="18.0" text="Schedule Meeting" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="28.0" />
+                        </font>
+                     </Label>
+                     <Button fx:id="lec_pre_scheduleMeeting_back_btn" layoutX="1368.0" layoutY="18.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-font-size: 21;" styleClass="delete-btn" text="Go Back" />
+                  </children>
+               </AnchorPane>
+               <Label layoutX="62.0" layoutY="142.0" text="Course Code :">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+               <ChoiceBox fx:id="scheduleMeeting_ChoiceBox_courseCode" focusTraversable="false" layoutX="321.0" layoutY="137.0" prefHeight="40.0" prefWidth="370.0" styleClass="textfield" />
+               <Label layoutX="62.0" layoutY="283.0" text="Presentation Name :">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+               <Label layoutX="62.0" layoutY="351.0" text="Date :">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+               <Label layoutX="62.0" layoutY="419.0" text="Time :">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="scheduleMeeting_textBox_PresentationName" focusTraversable="false" layoutX="321.0" layoutY="278.0" prefHeight="40.0" prefWidth="370.0" promptText="Group_No / Presentation_Name" styleClass="textfield" stylesheets="@css/dashBoardDesign.css" />
+               <DatePicker fx:id="scheduleMeeting_datePicker" focusTraversable="false" layoutX="321.0" layoutY="346.0" prefHeight="41.0" prefWidth="370.0" styleClass="textfield" stylesheets="@css/dashBoardDesign.css" />
+               <TextField fx:id="scheduleMeeting_textBox_Time" focusTraversable="false" layoutX="321.0" layoutY="414.0" prefHeight="40.0" prefWidth="370.0" styleClass="textfield" stylesheets="@css/dashBoardDesign.css" />
+               <Button fx:id="scheduleMeeting_btn_clear" focusTraversable="false" layoutX="321.0" layoutY="518.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" styleClass="clear-btn" text="Clear" />
+               <Button fx:id="scheduleMeeting_btn_scheduleAndPrint" focusTraversable="false" layoutX="321.0" layoutY="598.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="368.0" styleClass="print-btn" text="Schedule And  Print" />
+               <Button fx:id="scheduleMeeting_btn_schedule" focusTraversable="false" layoutX="528.0" layoutY="518.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="161.0" styleClass="pdf-btn" text="Schedule" />
+               <Label layoutX="62.0" layoutY="216.0" text="Group No :">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="scheduleMeeting_textBox_groupNo" focusTraversable="false" layoutX="321.0" layoutY="211.0" prefHeight="40.0" prefWidth="370.0" styleClass="textfield" stylesheets="@css/dashBoardDesign.css" />
+            </children>
+         </AnchorPane>
+         <AnchorPane fx:id="lec_pre_performance_pane" layoutX="14.0" layoutY="14.0" prefHeight="975.0" prefWidth="1580.0" visible="false">
+            <styleClass>
+               <String fx:value="shadow" />
+               <String fx:value="white-bg" />
+            </styleClass>
+            <children>
+               <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="75.0" prefWidth="1550.0" styleClass="performance-bg" stylesheets="@css/presentation.css">
+                  <children>
+                     <Button fx:id="lec_pre_performance_back_btn" focusTraversable="false" layoutX="1368.0" layoutY="18.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-font-size: 21;" styleClass="delete-btn" text="Go Back" />
+                     <Label layoutX="55.0" layoutY="18.0" text="Performance" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="28.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </AnchorPane>
+               <AnchorPane layoutX="15.0" layoutY="98.0" prefHeight="319.0" prefWidth="1550.0">
+                  <styleClass>
+                     <String fx:value="white-bg" />
+                     <String fx:value="shadow" />
+                  </styleClass>
+                  <children>
+                     <TableView fx:id="performanceCriteria_table" focusTraversable="false" layoutX="25.0" layoutY="14.0" prefHeight="219.0" prefWidth="1500.0">
+                       <columns>
+                         <TableColumn fx:id="performanceCriteria_table_criteria" prefWidth="1119.0" text="Performance Criteria" />
+                         <TableColumn fx:id="performanceCriteria_table_marks" prefWidth="379.0" text="Marks" />
+                       </columns>
+                     </TableView>
+                     <Button fx:id="performance_textField_add_btn" focusTraversable="false" layoutX="1414.0" layoutY="264.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="102.0" styleClass="add-btn" text="Add" />
+                     <Label layoutX="25.0" layoutY="267.0" text="Performance Criteria :">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="performance_textField_Criteria" focusTraversable="false" layoutX="194.0" layoutY="263.0" prefHeight="34.0" prefWidth="592.0" styleClass="textfield">
+                        <font>
+                           <Font size="13.0" />
+                        </font>
+                     </TextField>
+                     <Label layoutX="836.0" layoutY="267.0" text="Marks :">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="performance_textField_Marks" focusTraversable="false" layoutX="899.0" layoutY="263.0" prefHeight="34.0" prefWidth="165.0" styleClass="textfield">
+                        <font>
+                           <Font size="13.0" />
+                        </font>
+                     </TextField>
+                     <Button fx:id="performance_textField_delete_btn" focusTraversable="false" layoutX="1280.0" layoutY="264.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="102.0" styleClass="delete-btn" text="Delete" />
+                     <Button fx:id="performance_clear_btn" focusTraversable="false" layoutX="1141.0" layoutY="264.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="102.0" styleClass="clear-btn" text="Clear" />
+                  </children>
+               </AnchorPane>
+               <AnchorPane layoutX="14.0" layoutY="431.0" prefHeight="530.0" prefWidth="1552.0">
+                  <styleClass>
+                     <String fx:value="white-bg" />
+                     <String fx:value="shadow" />
+                  </styleClass>
+                  <children>
+                     <TableView fx:id="performanceAllTable" layoutX="14.0" layoutY="50.0" prefHeight="431.0" prefWidth="715.0">
+                       <columns>
+                         <TableColumn fx:id="performanceAllTable_courseCode" prefWidth="102.0" text="Course Code" />
+                         <TableColumn fx:id="performanceAllTable_courseName" prefWidth="238.0" text="Course Name" />
+                           <TableColumn fx:id="performanceAllTable_groupNo" prefWidth="102.0" text="Group No" />
+                           <TableColumn fx:id="performanceAllTable_presentation" prefWidth="272.0" text="Presentation" />
+                       </columns>
+                     </TableView>
+                     <TableView fx:id="performanceStudentTable" layoutX="748.0" layoutY="50.0" prefHeight="432.0" prefWidth="277.0">
+                       <columns>
+                         <TableColumn fx:id="performanceStudentTable_studentNo" prefWidth="168.0" text="Student No" />
+                         <TableColumn fx:id="performanceStudentTable_overAllScore" prefWidth="108.0" text="Overall Score" />
+                       </columns>
+                     </TableView>
+                     <TableView fx:id="performance_studentPerformance" layoutX="1045.0" layoutY="50.0" prefHeight="430.0" prefWidth="494.0">
+                       <columns>
+                         <TableColumn fx:id="performance_studentPerformance_criteria" prefWidth="405.0" text="Performance Criteria" />
+                         <TableColumn fx:id="performance_studentPerformance_score" prefWidth="88.0" text="Score" />
+                       </columns>
+                     </TableView>
+                     <TextField fx:id="performance_searchBar" layoutX="21.0" layoutY="14.0" prefHeight="25.0" prefWidth="271.0" promptText="Search" styleClass="search" />
+                     <TextField fx:id="performance_textField__courseCode" editable="false" focusTraversable="false" layoutX="124.0" layoutY="491.0" prefHeight="25.0" prefWidth="150.0" styleClass="textfield" />
+                     <Label layoutX="33.0" layoutY="495.0" text="Course Code :">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="performance_textField_groupNo" editable="false" focusTraversable="false" layoutX="384.0" layoutY="491.0" prefHeight="25.0" prefWidth="150.0" styleClass="textfield" />
+                     <Label layoutX="313.0" layoutY="495.0" text="Group No :">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="performance_textField_StudentNo" editable="false" focusTraversable="false" layoutX="819.0" layoutY="491.0" prefHeight="25.0" prefWidth="121.0" styleClass="textfield" />
+                     <Label layoutX="740.0" layoutY="495.0" text="Student No :">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font>
+                     </Label>
+                     <Button fx:id="performance_groupSearch_btn" focusTraversable="false" layoutX="569.0" layoutY="490.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="79.0" styleClass="update-btn" text="Search" />
+                     <Button fx:id="performance_studentSearch_btn" focusTraversable="false" layoutX="946.0" layoutY="490.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="73.0" styleClass="update-btn" text="Search" />
+                     <Label layoutX="1212.0" layoutY="13.0" text="Student Performance">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </AnchorPane>
+            </children>
          </AnchorPane>
       </AnchorPane>
    </center>
