@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c125030b-bfdf-4ae3-ba43-63d2e6aaed02" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/presentation_guided_system/lecturer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/presentation.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/presentation_guided_system/open.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/presentation_guided_system/open.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/presentation_guided_system/opening.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/presentation_guided_system/opening.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/dashBoardDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/dashBoardDesign.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/lecturer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lecturer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/open.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +60,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.open.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.open.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;lecturer-interface-designing&quot;,
@@ -79,7 +71,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.31954023&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
@@ -131,8 +123,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.300" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.300" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
       </set>
     </attachedChunks>
   </component>
@@ -157,6 +149,10 @@
       <workItem from="1732852948319" duration="12050000" />
       <workItem from="1732881177367" duration="1317000" />
       <workItem from="1733491221286" duration="10551000" />
+      <workItem from="1734015602502" duration="852000" />
+      <workItem from="1734170722021" duration="1329000" />
+      <workItem from="1734350012214" duration="2947000" />
+      <workItem from="1734354134657" duration="3048000" />
     </task>
     <servers />
   </component>
